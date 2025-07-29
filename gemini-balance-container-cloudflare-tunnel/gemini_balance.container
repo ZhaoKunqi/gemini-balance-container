@@ -1,0 +1,14 @@
+[Unit]
+Description=Podman container - Gemini Balance
+After=network-online.target nss-lookup.target
+
+[Container]
+ContainerName=gemini-balance-cftunnel
+Image=ghcr.io/zhaokunqi/gemini-balance-container:cftunnel
+Environment=CLOUDFLARE_TOKEN=Your_CloudFlare_Access_ZeroTrust_Networks_Tunnel_Token_Here
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
