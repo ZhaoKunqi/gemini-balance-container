@@ -11,6 +11,7 @@ After=network-online.target nss-lookup.target
 ContainerName=gemini-balance-cftunnel
 Image=ghcr.io/zhaokunqi/gemini-balance-container:cftunnel
 Environment=CLOUDFLARE_TOKEN=Your_CloudFlare_Access_ZeroTrust_Networks_Tunnel_Token_Here
+Volume=/etc/gemini-balance-config:/app:Z'
 
 [Service]
 Restart=always
